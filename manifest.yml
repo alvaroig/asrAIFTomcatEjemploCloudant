@@ -2,7 +2,6 @@
 applications:
 - name: asrAIFTomcatEjemploCloudant
   host: asrAIFTomcatEjemploCloudant
-  random-route: true
   path: target/asrTomcatEjemploCloudant.war
   memory: 256M
   instances: 1
@@ -10,4 +9,4 @@ applications:
   host: asraifTomcatEjemploCloudant
   domain: eu-gb.mybluemix.net
   services:
-  - Cloudant NoSQL DB-ke
+  - asrAIFCloudantNoSQL
