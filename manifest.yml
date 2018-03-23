@@ -1,6 +1,7 @@
 ---
 applications:
-- name: asrTomcatEjemploCloudant
+- name: asrAIFTomcatEjemploCloudant
+  host: asrAIFTomcatEjemploCloudant
   random-route: true
   path: target/asrTomcatEjemploCloudant.war
   memory: 256M
