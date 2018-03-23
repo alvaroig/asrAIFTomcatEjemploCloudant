@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Proyecto ASR Alvaro Iglesias.</title>
+<title>Proyecto ASR Alvaro Iglesias Fernandez.</title>
 </head>
 <body>
-<h1>Ejemplo de Proyecto de ASR</h1>
+<h1>Ejemplo de Proyecto de Arquitectura de Servicios en Red</h1>
 <p>Opciones:</p>
 <ul>
 <li><a href="listar">Listar</a></li>
