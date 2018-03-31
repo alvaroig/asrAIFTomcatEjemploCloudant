@@ -12,19 +12,42 @@ public class Traductor
 {
 	public static String translate(String palabra) 
 	{
-		LanguageTranslator service = new LanguageTranslator(); service.setUsernameAndPassword("USER NAME", "PASSWORD");
-		TranslateOptions translateOptions = new TranslateOptions.Builder()
-		              .addText(palabra)
-		              .modelId("en-es")
-		              .build();
-		TranslationResult translationResult = service.translate(translateOptions).execute();
-		System.out.println(translationResult);
-		String traduccionJSON = translationResult.toString();
-		          JsonParser parser = new JsonParser();
+		
+		LanguageTranslator service = new LanguageTranslator(); 
+		service.setUsernameAndPassword("USER", "PASSWORD");
+		service.setEndPoint("https://gateway.watsonplatform.net/language- translator/api");
+		TranslationResult translationResult = service.translate(palabra, Language.SPANISH, Language.ENGLISH).execute();
+		
+		String traduccionJSON = translationResult.toString(); 
+		
+		System.out.println(traduccionJSON+"\n-------\n");
+		
+		JsonParser parser = new JsonParser();
 		JsonObject rootObj = parser.parse(traduccionJSON).getAsJsonObject();
-		String wordCount = rootObj.get("word_count").getAsString(); JsonArray traducciones = rootObj.getAsJsonArray("translations"); String traduccionPrimera = palabra;
+		String wordCount = rootObj.get("word_count").getAsString(); 
+		JsonArray traducciones = rootObj.getAsJsonArray("translations"); 
+		String traduccionPrimera = palabra;
 		if(traducciones.size()>0)
-		traduccionPrimera = traducciones.get(0).getAsJsonObject().get("translation").getAsString();
-		return traduccionPrimera;
-	}
+			traduccionPrimera = traducciones.get(0).getAsJsonObject().get("translation").getAsString();
+			return traduccionPrimera;
+	} 
 }
+
+
+/**
+LanguageTranslator service = new LanguageTranslator(); 
+service.setUsernameAndPassword("USER NAME", "PASSWORD");
+TranslateOptions translateOptions = new TranslateOptions.Builder()
+              .addText(palabra)
+              .modelId("en-es")
+              .build();
+TranslationResult translationResult = service.translate(translateOptions).execute();
+System.out.println(translationResult);
+String traduccionJSON = translationResult.toString();
+          JsonParser parser = new JsonParser();
+JsonObject rootObj = parser.parse(traduccionJSON).getAsJsonObject();
+String wordCount = rootObj.get("word_count").getAsString(); JsonArray traducciones = rootObj.getAsJsonArray("translations"); String traduccionPrimera = palabra;
+if(traducciones.size()>0)
+traduccionPrimera = traducciones.get(0).getAsJsonObject().get("translation").getAsString();
+return traduccionPrimera;
+*/
