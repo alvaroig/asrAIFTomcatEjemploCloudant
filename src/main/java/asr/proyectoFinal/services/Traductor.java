@@ -20,10 +20,14 @@ public class Traductor
 		              .build();
 		TranslationResult translationResult = service.translate(translateOptions).execute();
 		System.out.println(translationResult);
+		
 		String traduccionJSON = translationResult.toString();
-		          JsonParser parser = new JsonParser();
+		
+		JsonParser parser = new JsonParser();
 		JsonObject rootObj = parser.parse(traduccionJSON).getAsJsonObject();
-		String wordCount = rootObj.get("word_count").getAsString(); JsonArray traducciones = rootObj.getAsJsonArray("translations"); String traduccionPrimera = palabra;
+		String wordCount = rootObj.get("word_count").getAsString(); 
+		JsonArray traducciones = rootObj.getAsJsonArray("translations"); 
+		String traduccionPrimera = palabra;
 		if(traducciones.size()>0)
 		traduccionPrimera = traducciones.get(0).getAsJsonObject().get("translation").getAsString();
 		return traduccionPrimera;
