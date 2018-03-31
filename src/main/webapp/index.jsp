@@ -12,13 +12,8 @@
 <p>Opciones de la clase de ASR:</p>
 <ul>
 <li><a href="listar">Listar</a></li>
-<li><a href="insertar palabra= ?">Insertar</a></li>
-<li>
-	<form action="insertar">
-		<input type="text" name="palabraInsertar">
-		<input type="submit" value= "Insertar">
-	</form>
-</li>
+<li><a href="insertar?palabra=hola">Insertar</a></li>
+
 <li>
 	<form action="traducir">
 		<input type="text" name="palabraTraducir">
