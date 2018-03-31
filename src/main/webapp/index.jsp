@@ -13,13 +13,14 @@
 <ul>
 <li><a href="listar">Listar</a></li>
 <li><a href="insertar?palabra=hola">Insertar</a></li>
-
-<li>
-	<form action="traducir">
-		<input type="text" name="palabraTraducir">
-		<input type="submit" value= "Traducir del Español al Ingles">
+<form action="insertar">
+		Palabra en español: <input type="text" name="palabra">
+		<input type="submit" value="Guardar" />
 	</form>
 </li>
+</ul>
+
+
 </ul>
 </body>
 </html>
