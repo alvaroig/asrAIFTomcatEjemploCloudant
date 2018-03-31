@@ -70,6 +70,7 @@ public class Controller extends HttpServlet {
 			
 			case "/traducir":
 				Palabra palabraParaTraducir = new Palabra();
+				
 				String parametroParaTraducir = request.getParameter("palabraTraducir");
 	
 				if(parametroParaTraducir==null)
