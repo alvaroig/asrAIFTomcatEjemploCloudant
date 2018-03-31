@@ -4,14 +4,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Proyecto ASR Alvaro Iglesias Fernandez.</title>
+<title>Proyecto ASR</title>
 </head>
 <body>
-<h1>Ejemplo de Proyecto de Arquitectura de Servicios en Red</h1>
-<p>Opciones:</p>
+<h1>Ejemplo de Proyecto de ASR con Cloudant ahora con DevOps</h1>
+<hr />
+<p>Opciones de la clase de ASR:</p>
 <ul>
 <li><a href="listar">Listar</a></li>
-<li><a href="insertar?palabra=">Insertar</a></li>
+<li><a href="insertar?palabra=hola">Insertar</a></li>
 </ul>
 </body>
 </html>
