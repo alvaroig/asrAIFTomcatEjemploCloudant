@@ -15,7 +15,7 @@
 <li>
 	<form action="traducir">
 		Palabra en español: <input type="text" name="palabraTraducir">
-		<input type="submit" value="Traducir del Inglés al Español y guardar">
+		<input type="submit" value="Traducir del Español al Inglés y guardar">
 	</form>
 </li>
 </ul>
