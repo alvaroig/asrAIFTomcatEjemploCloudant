@@ -15,7 +15,7 @@ public class Traductor
 		service.setUsernameAndPassword("55807c05-24f5-498d-800d-1c6d9ffe3942", "C1PoYe57Z0c3");
 		TranslateOptions translateOptions = new TranslateOptions.Builder()
 		              .addText(palabra)
-		              .modelId("en-es")
+		              .modelId("es-en")
 		              .build();
 		
 		TranslationResult translationResult = service.translate(translateOptions).execute();

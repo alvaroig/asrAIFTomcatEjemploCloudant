@@ -16,7 +16,7 @@
 <li>
 <form action="insertar">
 		Palabra en español: <input type="text" name="palabra">
-		<input type="submit" value="Guardada en ingles" />
+		<input type="submit" value="Guardar en ingles" />
 	</form>
 </li>
 </ul>
