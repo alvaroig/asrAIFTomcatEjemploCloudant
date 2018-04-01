@@ -75,7 +75,7 @@ public class Controller extends HttpServlet {
 	
 				if(parametroParaTraducir==null)
 				{
-					out.println("usage: /traducir?palabraTraducir=hola");
+					out.println("usage: /traducir?palabra=hola");
 				}
 				else
 				{
