@@ -7,16 +7,15 @@
 <title>Proyecto ASR</title>
 </head>
 <body>
-<h1>Ejemplo de Proyecto de ASR Alvaro Iglesias</h1>
-<hr />
-<p>Opciones de la clase de ASR:</p>
+<h1>Ejemplo de Proyecto de Álvaro Iglesias</h1>
+
 <ul>
 <li><a href="listar">Listar</a></li>
 <li><a href="insertar?palabra=hola">Insertar</a></li>
 <li>
-<form action="insertar">
-		Palabra en español: <input type="text" name="palabra">
-		<input type="submit" value="Guardar en ingles" />
+	<form action="traducir">
+		Palabra en español: <input type="text" name="palabraTraducir">
+		<input type="submit" value="Traducir del Inglés al Español y guardar">
 	</form>
 </li>
 </ul>
