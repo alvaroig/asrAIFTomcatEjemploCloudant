@@ -25,7 +25,7 @@ import asr.proyectoFinal.services.Traductor;
 /**
  * Servlet implementation class Controller
  */
-@WebServlet(urlPatterns = {"/listar", "/insertar", "/hablar"})
+@WebServlet(urlPatterns = {"/listar", "/insertar", "/hablar", "/traducir"})
 public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -71,7 +71,7 @@ public class Controller extends HttpServlet {
 			case "/traducir":
 				Palabra palabraParaTraducir = new Palabra();
 				
-				String parametroParaTraducir = request.getParameter("palabraTraducir");
+				String parametroParaTraducir = request.getParameter("palabra");
 	
 				if(parametroParaTraducir==null)
 				{
