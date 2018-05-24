@@ -25,11 +25,25 @@ public class Tone {
 		JsonParser parser = new JsonParser(); 
 		JsonObject rootObj = parser.parse(toneJSON).getAsJsonObject();
 		
-		String documentTone = rootObj.get("document_tone").getAsString();
-	
+		//String document_tone = rootObj.get("document_tone").getAsString();
+		//System.out.println(document_tone);
+		
 		JsonArray tonos = rootObj.getAsJsonArray("tones");
-		String tono = tonos.get(3).getAsString();
+		String tono = tonos.get(0).getAsJsonObject().get("tone_name").getAsString();
 	
+		/**
+		 * "document_tone" : {
+    			"tones" : [ {
+      		  "score" : 0.6165,
+		      "tone_id" : "sadness",
+		      "tone_name" : "Sadness"
+		    }, {
+		      "score" : 0.829888,
+		      "tone_id" : "analytical",
+		      "tone_name" : "Analytical"
+		    } ]
+		  }
+		 */
 		//String tono;
 		//tono = tonos.getAsJsonObject().get("tone_name").getAsString(); 
 		return tono;
