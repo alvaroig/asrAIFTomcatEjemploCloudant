@@ -101,7 +101,7 @@ public class Controller extends HttpServlet {
 			case "/analizar":
 					String texto = request.getParameter("textoAanalizar");
 					String tono = Tone.tono(texto);
-					System.out.println("El sentimiento es...");
+					out.println("El sentimiento es...");
 					out.println(tono);
 				break;
 		}
