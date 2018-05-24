@@ -11,7 +11,12 @@
 
 <ul>
 <li><a href="listar">Listar</a></li>
-<li><a href="insertar?palabra=hola">Insertar</a></li>
+<li>
+<form action="insertar">
+		Palabra en español: <input type="text" name="palabraInsertar">
+		<input type="submit" value="Insertar">
+	</form>
+</li>
 <li>
 	<form action="traducir">
 		Palabra en español: <input type="text" name="palabraTraducir">

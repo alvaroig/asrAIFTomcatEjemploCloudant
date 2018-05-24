@@ -49,11 +49,11 @@ public class Controller extends HttpServlet {
 				
 			case "/insertar":
 				Palabra palabra = new Palabra();
-				String parametro = request.getParameter("palabra");
+				String parametro = request.getParameter("palabraInsertar");
 
 				if(parametro==null)
 				{
-					out.println("usage: /insertar?palabra=palabra_a_traducir");
+					out.println("usage: /insertar?palabraInsertar=hola");
 				}
 				else
 				{
