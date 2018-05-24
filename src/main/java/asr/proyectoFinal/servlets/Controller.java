@@ -85,6 +85,7 @@ public class Controller extends HttpServlet {
 						String palabraTraducida = Traductor.translate(parametroParaTraducir);
 						out.println(String.format("Palabra: %s", parametroParaTraducir));
 						out.println(String.format("Palabra Traducida: %s", palabraTraducida));
+						System.out.println("Reproduciendo...");
 						Reproducir.reproducir();
 					}
 					else
@@ -93,6 +94,7 @@ public class Controller extends HttpServlet {
 						palabraParaTraducir.setName(palabraTraducida);
 						store.persist(palabraParaTraducir);
 					    out.println(String.format("Almacenada la palabra: %s", palabraParaTraducir.getName()));
+					    System.out.println("Reproduciendo...");
 					    Reproducir.reproducir();
 					}
 				}
