@@ -18,6 +18,12 @@
 		<input type="submit" value="Traducir del Español al Inglés y guardar">
 	</form>
 </li>
+<li>
+	<form action="Analizar">
+		Texto: <input type="text" name="textoAanalizar">
+		<input type="submit" value="Traducir del Español al Inglés y guardar">
+	</form>
+</li>
 </ul>
 </body>
 </html>
