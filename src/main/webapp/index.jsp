@@ -21,7 +21,7 @@
 <li>
 	<form action="Analizar">
 		Texto: <input type="text" name="textoAanalizar">
-		<input type="submit" value="Traducir del Español al Inglés y guardar">
+		<input type="submit" value="Analizar el texto">
 	</form>
 </li>
 </ul>
