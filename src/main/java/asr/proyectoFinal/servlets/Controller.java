@@ -92,7 +92,8 @@ public class Controller extends HttpServlet {
 						String palabraTraducida = Traductor.translate(parametroParaTraducir);
 						palabraParaTraducir.setName(palabraTraducida);
 						store.persist(palabraParaTraducir);
-					    out.println(String.format("Almacenada la palabra: %s", palabraParaTraducir.getName()));			    	  
+					    out.println(String.format("Almacenada la palabra: %s", palabraParaTraducir.getName()));
+					    Reproducir.reproducir();
 					}
 				}
 				break;
