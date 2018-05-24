@@ -20,10 +20,12 @@ public class Tone {
 		
 		ToneOptions toneOptions = new ToneOptions.Builder().text(text).build();
 		ToneAnalysis tone = service.tone(toneOptions).execute();
-		String analisisJSON = tone.toString();
+		
 		JsonParser parser = new JsonParser();
-		JsonObject rootObj = parser.parse(analisisJSON).getAsJsonObject();
-		String tono = rootObj.get("tone_name").getAsString(); 
-		return tono;
+		JsonObject rootObj = parser.parse(tone.toString()).getAsJsonObject();
+		System.out.println(rootObj.get("document_tone").toString());
+		String devolucion = rootObj.get("document_tone").getAsString();
+		
+		return devolucion;
 	}
 }
