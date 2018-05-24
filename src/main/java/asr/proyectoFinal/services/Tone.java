@@ -14,18 +14,13 @@ import com.ibm.watson.developer_cloud.tone_analyzer.v3.model.ToneOptions;
 
 public class Tone { 
 	
-	public static String tono(String text) { 
+	public static void tono(String text) { 
 		ToneAnalyzer service = new ToneAnalyzer("2017-09-21");
 		service.setUsernameAndPassword("9c31467e-fb00-46a9-bf5b-a51d0b0615f6", "2stp5I6gsZ14");
 		
 		ToneOptions toneOptions = new ToneOptions.Builder().text(text).build();
 		ToneAnalysis tone = service.tone(toneOptions).execute();
-		
-		JsonParser parser = new JsonParser();
-		JsonObject rootObj = parser.parse(tone.toString()).getAsJsonObject();
-		System.out.println(rootObj.get("document_tone").toString());
-		String devolucion = rootObj.get("document_tone").getAsString();
-		
-		return devolucion;
+		System.out.println(tone);
 	}
+	
 }

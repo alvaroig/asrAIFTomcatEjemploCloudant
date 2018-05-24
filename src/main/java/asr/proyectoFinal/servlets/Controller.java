@@ -27,7 +27,7 @@ import asr.proyectoFinal.services.Traductor;
 /**
  * Servlet implementation class Controller
  */
-@WebServlet(urlPatterns = {"/listar", "/insertar", "/hablar", "/traducir", "/analizar"})
+@WebServlet(urlPatterns = {"/listar", "/insertar", "/traducir", "/analizar"})
 public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -100,9 +100,9 @@ public class Controller extends HttpServlet {
 				
 			case "/analizar":
 					String texto = request.getParameter("textoAanalizar");
-					String tono = Tone.tono(texto);
-					out.println("El sentimiento es...");
-					out.println(tono);
+					Tone.tono(texto);
+					System.out.println("El sentimiento es...");
+					
 				break;
 		}
 		out.println("</html>");
