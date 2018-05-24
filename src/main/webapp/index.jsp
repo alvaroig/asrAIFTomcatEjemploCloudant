@@ -2,18 +2,25 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Proyecto ASR</title>
+<title>Proyecto Final ASR</title>
+<style>
+			body  {
+    			background: url("https://i2.wp.com/saberyganarconsultores.com/wp-content/uploads/2018/02/fondo-azul-claro.jpg") no-repeat ;
+			}
+		</style>
 </head>
+
 <body>
-<h1>Ejemplo de Proyecto de Álvaro Iglesias</h1>
+<h1>Realizado por Álvaro Iglesias Fernández</h1>
 
 <ul>
 <li><a href="listar">Listar</a></li>
 <li>
 <form action="insertar">
-		Palabra en español: <input type="text" name="palabraInsertar">
+		Insertar: <input type="text" name="palabraInsertar">
 		<input type="submit" value="Insertar">
 	</form>
 </li>
