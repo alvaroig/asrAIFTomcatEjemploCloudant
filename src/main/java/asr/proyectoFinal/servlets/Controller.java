@@ -21,6 +21,7 @@ import javax.servlet.http.HttpServletResponse;
 import asr.proyectoFinal.dao.CloudantPalabraStore;
 import asr.proyectoFinal.dominio.Palabra;
 import asr.proyectoFinal.services.Reproducir;
+import asr.proyectoFinal.services.Tone;
 import asr.proyectoFinal.services.Traductor;
 
 /**
@@ -85,8 +86,9 @@ public class Controller extends HttpServlet {
 						String palabraTraducida = Traductor.translate(parametroParaTraducir);
 						out.println(String.format("Palabra: %s", parametroParaTraducir));
 						out.println(String.format("Palabra Traducida: %s", palabraTraducida));
-						System.out.println("Reproduciendo...");
-						Reproducir.reproducir();
+						out.println("El sentimiento es...");
+						String tono = Tone.tono();
+						out.println(tono);
 					}
 					else
 					{
@@ -94,8 +96,9 @@ public class Controller extends HttpServlet {
 						palabraParaTraducir.setName(palabraTraducida);
 						store.persist(palabraParaTraducir);
 					    out.println(String.format("Almacenada la palabra: %s", palabraParaTraducir.getName()));
-					    System.out.println("Reproduciendo...");
-					    Reproducir.reproducir();
+					    out.println("El sentimiento es...");
+					    String tono = Tone.tono();
+						out.println(tono);
 					}
 				}
 				break;

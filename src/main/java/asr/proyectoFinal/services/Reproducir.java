@@ -18,8 +18,7 @@ public class Reproducir {
 	
 		try {
 		  String text = "Hello world";
-		  InputStream stream = service.synthesize(text, Voice.EN_ALLISON,
-		    AudioFormat.WAV).execute();
+		  InputStream stream = service.synthesize(text, Voice.EN_ALLISON, AudioFormat.WAV).execute();
 		  InputStream in = WaveUtils.reWriteWaveHeader(stream);
 		  OutputStream out = new FileOutputStream("hello_world.wav");
 		  byte[] buffer = new byte[1024];
