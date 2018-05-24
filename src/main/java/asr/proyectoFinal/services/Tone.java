@@ -20,7 +20,6 @@ public class Tone {
 		
 		ToneOptions toneOptions = new ToneOptions.Builder().text(text).build();
 		ToneAnalysis tone = service.tone(toneOptions).execute();
-		
 		String analisisJSON = tone.toString();
 		JsonParser parser = new JsonParser();
 		JsonObject rootObj = parser.parse(analisisJSON).getAsJsonObject();
