@@ -37,6 +37,7 @@ import javax.servlet.ServletOutputStream;
 /**
  * Servlet implementation class Controller
  */
+
 @MultipartConfig
 @WebServlet(urlPatterns = {"/voiceText"})
 public class voiceText extends HttpServlet {
@@ -47,7 +48,7 @@ public class voiceText extends HttpServlet {
 	SpeechToText service = new SpeechToText();
 	service.setUsernameAndPassword("d7d5b3c6-4656-437c-b608-5d50fb1723ef", "Lkj0O1dBELop");
 	  
-	Part filePart = request.getPart("audio"); // Retrieves <input type="file" name="file">
+	//Part filePart = request.getPart("audio"); // Retrieves <input type="file" name="file">
 
     String appPath = request.getServletContext().getRealPath("");
 	// constructs path of the directory to save uploaded file
