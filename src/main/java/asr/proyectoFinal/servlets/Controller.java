@@ -103,14 +103,15 @@ public class Controller extends HttpServlet {
 				break;
 				
 			case "/analizar":
+					out.println("El sentimiento es...1");
 					String texto = request.getParameter("textoAanalizar");
 					ToneAnalyzer service = new ToneAnalyzer("2017-09-21");
 					service.setUsernameAndPassword("9c31467e-fb00-46a9-bf5b-a51d0b0615f6", "2stp5I6gsZ14");
-					
+					out.println("El sentimiento es...2");
 					ToneOptions toneOptions = new ToneOptions.Builder().text(texto).build();
 					ToneAnalysis tone = service.tone(toneOptions).execute();
+					out.println("El sentimiento es...3");
 					//ToneAnalysis tono = Tone.tono(texto);
-					
 					out.println("El sentimiento es...");
 					out.println(tone);
 				break;
