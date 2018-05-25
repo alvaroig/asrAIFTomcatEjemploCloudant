@@ -33,8 +33,8 @@
 </li>
 <li>
 	<form action="analizar">
-		Texto: <input type="text" name="textoAanalizar">
-		<input type="submit" value="Analizar el texto">
+		Frase: <input type="text" name="textoAanalizar">
+		<input type="submit" value="Analizar frase">
 	</form>
 </li>
 </ul>
