@@ -14,7 +14,8 @@
 </head>
 
 <body>
-<div id="tiempo_0d9055a84070da5a83ff00a6a029b716"> <div></div><div> <img src="//www.tiempo.es/build/img/logo/tiempo133.png" width="80" height="18" alt="tiempo.es"> </div> <script type="text/javascript" src="//www.tiempo.es/widload/es/hor/1200/162/110/es0ma0079/0d9055a84070da5a83ff00a6a029b716.js"></script> </div><h1>Realizado por Álvaro Iglesias Fernández</h1>
+//<div id="tiempo_0d9055a84070da5a83ff00a6a029b716"> <div></div><div> <img src="//www.tiempo.es/build/img/logo/tiempo133.png" width="80" height="18" alt="tiempo.es"> </div> <script type="text/javascript" src="//www.tiempo.es/widload/es/hor/1200/162/110/es0ma0079/0d9055a84070da5a83ff00a6a029b716.js"></script> </div>
+<h1>Realizado por Álvaro Iglesias Fernández</h1>
 <li><a href="listar">Listar</a></li>
 <li>
 <form action="insertar">
@@ -29,7 +30,7 @@
 	</form>
 </li>
 <li>
-	<form action="Analizar">
+	<form action="analizar">
 		Texto: <input type="text" name="textoAanalizar">
 		<input type="submit" value="Analizar el texto">
 	</form>
