@@ -18,6 +18,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.ibm.watson.developer_cloud.tone_analyzer.v3.ToneAnalyzer;
+import com.ibm.watson.developer_cloud.tone_analyzer.v3.model.ToneAnalysis;
+import com.ibm.watson.developer_cloud.tone_analyzer.v3.model.ToneOptions;
+
 import asr.proyectoFinal.dao.CloudantPalabraStore;
 import asr.proyectoFinal.dominio.Palabra;
 import asr.proyectoFinal.services.Reproducir;
@@ -100,9 +104,15 @@ public class Controller extends HttpServlet {
 				
 			case "/analizar":
 					String texto = request.getParameter("textoAanalizar");
-					String tono = Tone.tono(texto);
+					ToneAnalyzer service = new ToneAnalyzer("2017-09-21");
+					service.setUsernameAndPassword("9c31467e-fb00-46a9-bf5b-a51d0b0615f6", "2stp5I6gsZ14");
+					
+					ToneOptions toneOptions = new ToneOptions.Builder().text(texto).build();
+					ToneAnalysis tone = service.tone(toneOptions).execute();
+					//ToneAnalysis tono = Tone.tono(texto);
+					
 					out.println("El sentimiento es...");
-					out.println(tono);
+					out.println(tone);
 				break;
 		}
 		out.println("</html>");

@@ -14,7 +14,7 @@ import com.ibm.watson.developer_cloud.tone_analyzer.v3.model.ToneOptions;
 
 public class Tone { 
 	
-	public static String tono(String text) { 
+	public static ToneAnalysis tono(String text) { 
 		ToneAnalyzer service = new ToneAnalyzer("2017-09-21");
 		service.setUsernameAndPassword("9c31467e-fb00-46a9-bf5b-a51d0b0615f6", "2stp5I6gsZ14");
 		
@@ -28,8 +28,8 @@ public class Tone {
 		//String document_tone = rootObj.get("document_tone").getAsString();
 		//System.out.println(document_tone);
 		
-		JsonArray tonos = rootObj.getAsJsonArray("tones");
-		String tono = tonos.get(0).getAsJsonObject().get("tone_name").getAsString();
+		//JsonArray tonos = rootObj.getAsJsonArray("tones");
+		//String tono = tonos.get(0).getAsJsonObject().get("tone_name").getAsString();
 	
 		/**
 		 * "document_tone" : {
@@ -46,7 +46,7 @@ public class Tone {
 		 */
 		//String tono;
 		//tono = tonos.getAsJsonObject().get("tone_name").getAsString(); 
-		return tono;
+		return tone;
 	}
 	
 }
