@@ -70,7 +70,7 @@ public class voiceText extends HttpServlet {
     
 	//String ext = savedFile.substring(savedFile.lastIndexOf(".")+1);    
 	RecognizeOptions options = new RecognizeOptions.Builder()
-      .model("en-US_BroadbandModel").contentType("audio/mp3")
+      .model("es-ES_BroadbandModel").contentType("audio/mp3")
       .interimResults(true).maxAlternatives(3)
       .keywords(new String[]{"colorado", "tornado", "tornadoes"})
       .keywordsThreshold(0.5).build();
@@ -87,17 +87,19 @@ public class voiceText extends HttpServlet {
 			resultado = resultado.concat(result.getResults().get(i).getAlternatives().get(0).getTranscript());
 		}
 	}
+	
+	String resultado2 = Traductor.translate(resultado);
 	//SpeechResults speechResults = service.recognize(dest, options).execute();
 	ToneAnalyzer serviceTone = new ToneAnalyzer("2018-05-25"); 
 	serviceTone.setUsernameAndPassword("9c31467e-fb00-46a9-bf5b-a51d0b0615f6", "2stp5I6gsZ14");
-	ToneOptions toneOptions = new ToneOptions.Builder().text(resultado).build();
+	ToneOptions toneOptions = new ToneOptions.Builder().text(resultado2).build();
 	ToneAnalysis tone = serviceTone.tone(toneOptions).execute();
 	String tono = tone.getDocumentTone().getTones().get(0).getToneName().toString();
-
-     //SpeechResults speechResults = service.recognize(dest, options).execute();
-	out.write(resultado);
+	
+	out.write("<br>");
+	out.write(resultado2);
+	out.write("<br>");
 	out.write(tono);
-
   }
   
   private String extractFileName(Part part) {
