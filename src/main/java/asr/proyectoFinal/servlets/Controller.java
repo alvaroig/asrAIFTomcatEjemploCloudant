@@ -110,8 +110,8 @@ public class Controller extends HttpServlet {
 					
 					ToneOptions toneOptions = new ToneOptions.Builder().text(text).build();
 					
-					ToneAnalysis tone = service.tone(toneOptions).execute();
-					System.out.println(tone);
+					ToneAnalysis tono = service.tone(toneOptions).execute();
+					System.out.println(tono);
 				break;
 		}
 		out.println("</html>");
