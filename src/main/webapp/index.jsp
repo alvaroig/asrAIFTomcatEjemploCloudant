@@ -40,7 +40,7 @@
     <fieldset>
         <legend class="text-center h1">Procesamiento de audio</legend>
         <div class="form-group" style="padding-top: 20px;">
-            <span class="col-md-1 col-md-offset-2 text-center">Introduzca el audio a analizar</span>
+            <span class="col-md-1 col-md-offset-2 text-center">Introduzca el audio a analizar en español</span>
             <div class="col-md-8">
                 <input type="file" name="audio" placeholder="Audio" class="form-control">
             </div>
