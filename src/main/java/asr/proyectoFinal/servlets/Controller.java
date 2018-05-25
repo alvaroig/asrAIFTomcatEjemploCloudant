@@ -27,6 +27,7 @@ import asr.proyectoFinal.dominio.Palabra;
 import asr.proyectoFinal.services.Reproducir;
 import asr.proyectoFinal.services.Tone;
 import asr.proyectoFinal.services.Traductor;
+import javassist.compiler.ast.Symbol;
 
 /**
  * Servlet implementation class Controller
@@ -103,17 +104,19 @@ public class Controller extends HttpServlet {
 				break;
 				
 			case "/analizar":
-					out.println("El sentimiento es...1");
-					String texto = request.getParameter("textoAanalizar");
+					//String texto = request.getParameter("textoAanalizar");
+					
+					//String texto = "I am happy";
 					ToneAnalyzer service = new ToneAnalyzer("2017-09-21");
 					service.setUsernameAndPassword("9c31467e-fb00-46a9-bf5b-a51d0b0615f6", "2stp5I6gsZ14");
-					out.println("El sentimiento es...2");
-					ToneOptions toneOptions = new ToneOptions.Builder().text(texto).build();
+					
+					String text = "Team, I know that times are tough! Product sales have "
+						    + "been disappointing for the past three quarters. We have a "
+						    + "competitive product, but we need to do a better job of selling it!";
+
+					ToneOptions toneOptions = new ToneOptions.Builder().text(text).build();
 					ToneAnalysis tone = service.tone(toneOptions).execute();
-					out.println("El sentimiento es...3");
-					//ToneAnalysis tono = Tone.tono(texto);
-					out.println("El sentimiento es...");
-					out.println(tone);
+					System.out.println(tone);
 				break;
 		}
 		out.println("</html>");
