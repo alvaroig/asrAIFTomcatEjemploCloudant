@@ -19,5 +19,4 @@ public class Tone {
 		String tono = tone.getDocumentTone().getTones().get(0).getToneName().toString();	
 		return tono;
 	}
-	
 }

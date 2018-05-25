@@ -7,10 +7,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Proyecto Final ASR</title>
 <style>
-			body  {
-    			background: url("https://i2.wp.com/saberyganarconsultores.com/wp-content/uploads/2018/02/fondo-azul-claro.jpg") no-repeat ;
-			}
-		</style>
+			body  {background-color: #2E64FE;}
+</style>
 </head>
 
 <body>
@@ -33,7 +31,7 @@
 </li>
 <li>
 	<form action="analizar">
-		Frase: <input type="text" name="textoAanalizar">
+		Frase en ingles: <input type="text" name="textoAanalizar">
 		<input type="submit" value="Analizar frase">
 	</form>
 </li>
