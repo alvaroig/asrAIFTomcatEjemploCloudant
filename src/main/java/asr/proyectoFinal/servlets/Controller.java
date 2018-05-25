@@ -18,16 +18,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.ibm.watson.developer_cloud.tone_analyzer.v3.ToneAnalyzer;
-import com.ibm.watson.developer_cloud.tone_analyzer.v3.model.ToneAnalysis;
-import com.ibm.watson.developer_cloud.tone_analyzer.v3.model.ToneOptions;
 
 import asr.proyectoFinal.dao.CloudantPalabraStore;
 import asr.proyectoFinal.dominio.Palabra;
-import asr.proyectoFinal.services.Reproducir;
 import asr.proyectoFinal.services.Tone;
 import asr.proyectoFinal.services.Traductor;
 import javassist.compiler.ast.Symbol;
+import com.google.gson.JsonArray; 
 
 /**
  * Servlet implementation class Controller

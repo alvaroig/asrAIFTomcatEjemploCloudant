@@ -3,7 +3,8 @@ package asr.proyectoFinal.services;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
-import com.google.gson.JsonArray; 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject; 
 import com.google.gson.JsonParser; 
 
@@ -20,32 +21,7 @@ public class Tone {
 		
 		ToneOptions toneOptions = new ToneOptions.Builder().text(text).build();
 		ToneAnalysis tone = service.tone(toneOptions).execute();
-		
-		String toneJSON = tone.toString();
-		JsonParser parser = new JsonParser();
-		
-		JsonObject rootObj = parser.parse(toneJSON).getAsJsonObject();
-		//String document_tone = rootObj.get("document_tone").getAsString();
-		
-		
-		JsonArray tonos = rootObj.getAsJsonArray("tones");
-		String tono = tonos.get(0).getAsJsonObject().get("tone_name").getAsString();
-	
-		/**
-		 * "document_tone" : {
-    			"tones" : [ {
-      		  "score" : 0.6165,
-		      "tone_id" : "sadness",
-		      "tone_name" : "Sadness"
-		    }, {
-		      "score" : 0.829888,
-		      "tone_id" : "analytical",
-		      "tone_name" : "Analytical"
-		    } ]
-		  }
-		 */
-		//String tono;
-		//tono = tonos.getAsJsonObject().get("tone_name").getAsString(); 
+		String tono = tone.getDocumentTone().getTones().get(0).getToneName().toString();	
 		return tono;
 	}
 	
