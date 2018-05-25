@@ -35,6 +35,24 @@
 		<input type="submit" value="Analizar frase">
 	</form>
 </li>
+<li>
+	<form class="form-horizontal" action="voiceText" enctype="multipart/form-data" method="POST">
+    <fieldset>
+        <legend class="text-center h1">Procesamiento de audio</legend>
+        <div class="form-group" style="padding-top: 20px;">
+            <span class="col-md-1 col-md-offset-2 text-center">Introduzca el audio a analizar</span>
+            <div class="col-md-8">
+                <input type="file" name="audio" placeholder="Audio" class="form-control">
+            </div>
+        
+          <div class="form-group">
+            <div class="col-md-12 text-center">
+                <button type="submit" class="btn btn-primary btn-lg">Procesar</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+</li>
 </ul>
 </body>
 </html>

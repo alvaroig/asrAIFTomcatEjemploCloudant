@@ -18,13 +18,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 import asr.proyectoFinal.dao.CloudantPalabraStore;
 import asr.proyectoFinal.dominio.Palabra;
 import asr.proyectoFinal.services.Tone;
 import asr.proyectoFinal.services.Traductor;
-import javassist.compiler.ast.Symbol;
-import com.google.gson.JsonArray; 
 
 /**
  * Servlet implementation class Controller
@@ -103,10 +100,10 @@ public class Controller extends HttpServlet {
 			case "/analizar":
 					String text = request.getParameter("textoAanalizar");
 					String salida= Tone.tono(text);
-					
 					System.out.println(salida);
 					out.println(salida);
 				break;
+				
 		}
 		out.println("</html>");
 	}
@@ -117,5 +114,4 @@ public class Controller extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 	}
-
 }
