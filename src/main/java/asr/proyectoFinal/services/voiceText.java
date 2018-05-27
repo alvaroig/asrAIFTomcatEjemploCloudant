@@ -96,10 +96,14 @@ public class voiceText extends HttpServlet {
 	ToneAnalysis tone = serviceTone.tone(toneOptions).execute();
 	String tono = tone.getDocumentTone().getTones().get(0).getToneName().toString();
 	
-	out.write("<br>");
-	out.write(resultado2);
-	out.write("<br>");
-	out.write(tono);
+	//out.write("<br>");
+	//out.write(resultado2);
+	//out.write("<br>");
+	//out.write(tono);
+	request.setAttribute("TextoTraduc",resultado2);
+	request.setAttribute("Sentimiento",tono);
+	request.getRequestDispatcher("segundo.jsp").forward(request, response);
+	
   }
   
   private String extractFileName(Part part) {
